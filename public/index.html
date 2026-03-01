@@ -3,22 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>DeepSeek Chat</title>
+<title>AI Chat</title>
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 <div id="app">
   <div id="topbar">
-    <div class="topbar-inner">
-      <button class="iconbtn" id="donateBtn" title="打赏 / Donate">💚</button>
-
-      <div class="pill">
-        <label>Model</label>
-        <select id="modelSel"></select>
+    <div class="topbar-inner" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      
+      <div style="display: flex; gap: 6px;">
+        <button class="iconbtn" id="donateBtn" title="打赏 / Donate">💚</button>
+        <a href="https://github.com/MallocPointer/unlimited-ai" target="_blank" class="iconbtn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; font-size: 1.1rem;" title="GitHub 开源地址">🐙</a>
       </div>
 
-      <button class="iconbtn" id="personaToggle" title="😈=使用Worker内置人物扮演 | 😇=不使用内置（网页自定义才生效）">😈</button>
-      <button class="iconbtn" id="settingsBtn" title="Settings">⚙️</button>
+      <div class="pill" style="margin: 0 4px; flex-shrink: 1; overflow: hidden;">
+        <label style="display: none;">Model</label> <select id="modelSel" style="max-width: 100%; text-overflow: ellipsis;"></select>
+      </div>
+
+      <div style="display: flex; gap: 6px;">
+        <button class="iconbtn" id="personaToggle" title="😈=使用Worker内置人物扮演 | 😇=不使用内置（网页自定义才生效）">😈</button>
+        <button class="iconbtn" id="settingsBtn" title="Settings">⚙️</button>
+      </div>
+
     </div>
   </div>
 
@@ -35,7 +41,6 @@
     </div>
   </div>
 
-  <!-- Settings -->
   <div id="settingsMask">
     <div id="settings">
       <div id="settingsHeader">
@@ -87,7 +92,6 @@
     </div>
   </div>
 
-  <!-- Donate -->
   <div id="donateMask">
     <div id="donateCard">
       <div id="donateHead">
