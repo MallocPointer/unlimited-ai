@@ -25,7 +25,7 @@
   const donateClose = document.getElementById("donateClose");
 
   const MODELS = (window.APP_MODELS || [
-    { id: "deepseek-ai/deepseek-v3.2", label: "deepseek-v3.2" },
+    { id: "meta/llama-3.1-405b-instruct", label: "meta/llama-3.1" },
     { id: "z-ai/glm5", label: "glm5" },
     { id: "openai/gpt-oss-120b", label: "gpt-oss-120b" },
   ]);
